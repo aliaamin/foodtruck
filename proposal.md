@@ -17,7 +17,7 @@ We will do rapid prototyping using the R language and Shiny package to demo the 
 ### Implementation Steps 
 The following illustrates the steps to proceed with this project. We express each step with a user story. To read full user story please refer to the backlog section.
 
-* __Story 01 Raw Data Cleanup.__
+* __Story 01. Raw Data Cleanup.__
 The original raw data from SFData requires clean up for several reasons, such as removing incomplete data or columns that are not useful.
 In addition to this we will change the title of the column so that it is easier for users to read. As a follow up might want to add a few columns that can help enrich the user experience, for example a summary of the food truck as description and food category. For more on this please see *05. Data Enrichment user story*.
 The clean up job is a separate activity that can be executed regularly whenever the data needs to be updated. To do a clean up, we run the *datacleanup.R* file. The result of the data is stored at *Mobile_Food_Facility_Permit_Clean.csv*.
@@ -151,12 +151,13 @@ As a user I would like to be able to make a selection based on Yelp review link
 
 ---
 
-#### Story 07. Automatic data refreshment (weekly)
+#### Story 07. Automatic data fetching and update
 As a user I would like to get updated food truck information so that I do not pick a food truck that no longer exist.
 
 *Acceptance Criteria*
 - Get new data from SFData every week.
-- Clean and refresh dataset every week.
+- Execute the data clean up program every week.
+- Refresh dataset for the app every week.
 
 ---
 
