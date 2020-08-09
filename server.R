@@ -11,7 +11,7 @@ shinyServer(function(input, output) {
   ft_data$Latitude <-  as.numeric(ft_data$Latitude)
   ft_data$Longitude <-  as.numeric(ft_data$Longitude)
 
-  pal <- colorFactor(pal = c("#1b9e77", "#d95f02", "#7570b3"), domain = c("Asian Food", "Mexican Food", "Western Food"))
+  pal <- colorFactor(pal = c("#800000", "#9A6324", "#808000", "#469990", "#e6194B", "#ffe119", "#bfef45", "#3cb44b", "#42d4f4", "#911eb4"), domain = c("Asian Food", "Mexican Food", "Fast Food", "Barbeque", "Salad", "Greek Food", "Ice Cream", "Indian Food", "Peruvian Food", "Sandwiches"))
 
   # create map, center at SF city  
   output$foodtruck_map <- renderLeaflet({
@@ -20,7 +20,8 @@ shinyServer(function(input, output) {
       addCircles(lng = ~Longitude, lat = ~Latitude) %>% 
       addTiles() %>%
       addCircleMarkers(data = ft_data, lat =  ~Latitude, lng =~Longitude, 
-                       radius = 3, popup = ~as.character(description), 
+                       radius = 7, popup = ~as.character(description),
+                       color = ~pal(FoodType),
                        stroke = FALSE, fillOpacity = 0.8)%>%
       addLegend(pal=pal, values=ft_data$FoodType,opacity=1, na.label = "Not Available")%>%
       addEasyButton(easyButton(

@@ -34,8 +34,20 @@ ft_data["FoodType"] = ""
 
 
 ft_data$Food <- tolower(ft_data$Food) 
-#ft_data$FoodType <- ifelse(grepl("noodles", ft_data$Food), "yes", "no")
-#ft_data$FoodType <- if(grepl("noodles", ft_data$Food)){return "Asian Food"}
+ft_data$FoodType <- ifelse(grepl(".*noodles.*", ft_data$Food), "Asian Food", ft_data$FoodType)
+ft_data$FoodType <- ifelse(grepl(".*asian.*", ft_data$Food), "Asian Food", ft_data$FoodType)
+ft_data$FoodType <- ifelse(grepl(".*burritos.*|.*tacos.*|.*nachos.*", ft_data$Food), "Mexican Food", ft_data$FoodType)
+ft_data$FoodType <- ifelse(grepl("mexican food", ft_data$Food), "Mexican Food", ft_data$FoodType)
+ft_data$FoodType <- ifelse(grepl("peruvian food", ft_data$Food), "Peruvian Food", ft_data$FoodType)
+ft_data$FoodType <- ifelse(grepl("fried chicken", ft_data$Food), "Fast Food", ft_data$FoodType)
+ft_data$FoodType <- ifelse(grepl(".*bbq.*", ft_data$Food), "Barbeque", ft_data$FoodType)
+ft_data$FoodType <- ifelse(grepl(".*salads.*", ft_data$Food), "Salad", ft_data$FoodType)
+ft_data$FoodType <- ifelse(grepl(".*indian.*", ft_data$Food), "Indian Food", ft_data$FoodType)
+ft_data$FoodType <- ifelse(grepl(".*ice cream.*", ft_data$Food), "Ice Cream", ft_data$FoodType)
+ft_data$FoodType <- ifelse(grepl("gyro", ft_data$Food), "Greek Food", ft_data$FoodType)
+ft_data$FoodType <- ifelse(grepl("sandwiches", ft_data$Food), "Sandwiches", ft_data$FoodType)
+ft_data$FoodType <- ifelse(grepl(".*hotdogs.*|.*sausages.*", ft_data$Food), "Fast Food", ft_data$FoodType)
+ft_data$FoodType <- ifelse(grepl("hotdogs", ft_data$Food), "Fast Food", ft_data$FoodType)
 
 # Write clean data
 write.csv(ft_data,"Mobile_Food_Facility_Permit_Clean.csv",row.names=FALSE)

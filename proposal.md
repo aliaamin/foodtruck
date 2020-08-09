@@ -117,6 +117,7 @@ As a user, I would like to see all available Food Truck in a map, so that I can 
 - The user shall be able to zoom in and out and pan the map to explore nearby food truck
 
 *Acceptance Test*
+
 *Given* the Map tab shows the data from the output file "Mobile_Food_Facility_Permit_Clean.csv"
 *When* I navigate myself towards Channel Street near the harbor.
 *then* I can see at least there are 3 food truck near me: "Got Snacks", "Wonder Philly", and "Kabob Trolley"
