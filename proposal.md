@@ -61,6 +61,17 @@ As a user, I would like to view only relevant information in the app, so that I 
 - Review and remove columns that will not be used, e.g. Supervisor.Districts, Schedule, NOISent, Permit number
 - Remove row entry for food truck that has no permit. i.e. expired, inactive or suspend.
 
+*Acceptance Test*
+
+- *Given* the output file "Mobile_Food_Facility_Permit_Clean.csv"
+ *When* we search for any food truck with status "expired"" or "inactive" or "suspend""
+ *then* no food truck item with this status can be found.
+
+- *Given* the output file "Mobile_Food_Facility_Permit_Clean.csv"
+ *When* we search for "Schedule" or "Supervisor.Districts" or "NOISent" column title
+ *then* no column with this title can be found.
+
+
 ---
 
 #### Story 02. View All Food Truck in Table
@@ -70,6 +81,12 @@ As a user, I would like to see all of available Food Truck in a table, so that I
 - All eligible food trucks will be presented as a table
 - Assign user friendly names to the columns, for example, Name, Location, Food, Availability and Zip codes
 
+*Acceptance Test*
+- *Given* the application is launched successfully
+ *When* we click on the Table tab
+ *then* there will be a table containing food truck data with 8 columns (Name, FacilityType, Location, Status, Food, Availability, Zip.Codes, FoodType).
+
+
 ---
 
 #### Story 03. Able to search or filter on the Table
@@ -78,6 +95,15 @@ As a user, I would like to be able to filter on the table to find the Food that 
 *Acceptance Criteria*
 - Allow users to filter result based on string match for every column, for example searching on all food tucks in one street.
 - Allow general search for a match across the whole columns
+
+*Acceptance Test*
+- *Given* the Table tab has the data from the output file "Mobile_Food_Facility_Permit_Clean.csv"
+ *When* I do a search on *Howard st* in the location field search
+ *then* I will see 5 food trucks option, all having *Howard st* match in the location column.
+ 
+- *Given* the Table tab shows the data from the output file "Mobile_Food_Facility_Permit_Clean.csv"
+ *When* I specify *noodles* in the *food* field search
+ *then* I will see 4 food trucks option, all offering noodles from the same company. 
 
 ---
 
@@ -89,6 +115,17 @@ As a user, I would like to see all available Food Truck in a map, so that I can 
 - The map shall display all elegible food truck from the clean data.csv file in a form of a point
 - Upon clicking each point additional basic information shall be shown, e.g. name of food truck, the type of food offered, availablity hours and address
 - The user shall be able to zoom in and out and pan the map to explore nearby food truck
+
+*Acceptance Test*
+*Given* the Map tab shows the data from the output file "Mobile_Food_Facility_Permit_Clean.csv"
+*When* I navigate myself towards Channel Street near the harbor.
+*then* I can see at least there are 3 food truck near me: "Got Snacks", "Wonder Philly", and "Kabob Trolley"
+
+*Given* the Map tab shows the data from the output file "Mobile_Food_Facility_Permit_Clean.csv"
+*When* I navigate myself towards any point in SF city.
+*then* I can see see and click any food truck and click the blue button to see more information.
+
+
 
 ---
 
