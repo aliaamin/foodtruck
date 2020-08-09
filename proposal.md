@@ -7,7 +7,7 @@ The San Fransisco team would like to be able to discover new places to eat. They
 ## Proposed Solution
 To allow our users to be able to discover new food truck from whereever they are in the city, we will build a food truck delivery application that is user friendly. The application will use a map and a table to allow users to browse and search for alternatives food truck near their desired area.
 
-The following diagram ilustrate how to approach such project when facing with external customers.
+The following diagram ilustrate how to approach such project when facing external customers.
 ![Demo Map](image/projectstep.png)
 
 ### Data
