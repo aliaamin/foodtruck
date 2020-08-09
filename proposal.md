@@ -170,3 +170,8 @@ As a user I would like to be able to make a selection based on Timeout review
 
 ---
 
+### Screenshot of Demo
+#### Table View
+![Demo Table](image/table.png)
+#### Map View
+![Demo Map](image/map.png)
