@@ -34,24 +34,23 @@ The first visualization is the table. The table view will allow the users to sea
 The demo code for this is kept under *server.R* file.
 
 * __Story 04. View All Food Truck in Map.__
-The second visualization is with a map. Search for food truck with a map will help users give spatial awareness on nearby food truck. The user can decide for themselves the level of radius that is acceptable as distance. Using the latitude and longitude data, every food truck is placed in a map. To help focus, the map center is San Francisco center and the zoom level is set so that the whole city is visible as default.
+The second visualization is with a map. Search for food truck with a map will help users give spatial awareness on nearby food truck. The user can decide for themselves the level of radius that is acceptable as distance. Using the latitude and longitude data, every food truck is placed in a map. To help focus, the map is centered at the center of the city and the whole city is visible as default.
 The demo code for this is kept under *server.R* file.
 
 * __Story 05. Advanced filtering on Map.__
 To allow complete exploration, the user will be able to zoom in/out and pan the map to find all possible options. 
 
 ## Next Steps
-The rapid prototype will show the first iteration (MVP) of what the application could look like. Further validation is needed to see if this application is helping the users (San Fransisco team) discover the food trucks that they like.
-Therefore as a next step, we would release this application to a small set of beta users and conduct an user interview to validate our assumptions and check if there are missing key features that we needed to add to our backlog.
+The rapid prototype will show the first iteration (MVP) of what the application could look like. Further validation is needed to see if this application is helping the users (San Francisco team) discover the food trucks that they like.
+Therefore as a next step, we would release this application to a small set of beta users and conduct user interviews to validate our assumptions and check if there are missing key features that we needed to add to our backlog.
 
-Based on the user feedback, we can expore other means to enhance the application. For example by means of connecting with other dataset.
-One use case would be to allow users to see reviews of other customers before making a decision wich Food truck to go to. For this purpose combining the original data with review and ratings data from [Yelp.com](https://www.yelp.com/) to further help our users make a decision on where to eat. Please see *Story 06* for more information.
+Based on the user feedback, we can expore other means to enhance the application. For example by connecting with other dataset.
+One possible use case is to allow users to read reviews of other customers before making a decision. To achieve this, we could combine the original data with review and ratings data from [Yelp.com](https://www.yelp.com/). Please see *Story 06* for more information.
 
-Another important next steps is keeping the data up to date. [The DataSF site](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat/data) has specified that the data changes every week. Therefore to avoid obsolete data, we need to refresh our dataset on a weekly bases. The maintenance of this data should be done automatically in the future. This includes: automatically fetch new data from SFData website, run data clean up process and data refresh for the application.
+Another possible next steps is automate the the data update. [The DataSF site](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat/data) has specified that the data changes every week. Therefore to avoid obsolete data, the application need to refresh its dataset on a weekly bases. The maintenance of this data should be done automatically in the future. The scope of this work includes: automatically fetch new data from SFData website, run data clean up process and loading the application with the latest dataset.
 Please see *Story 07* for more information.
 
 ## Appendix
-In case you observe the data projected on map is incorrect and you have more accurate or additional information that could be updated it will be great if you can email me and i will update the same.
 
 ### Backlog (User Stories)
 
