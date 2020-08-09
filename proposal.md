@@ -5,7 +5,7 @@
 The San Fransisco team would like to be able to discover new places to eat. They are particulary fond of food trucks. We would like to build a application that helps our San Fransisco team find alternative food truck options no matter where they are in the city.
 
 ## Proposed Solution
-To allow our users to be able to discover new food truck from whereever they are in the city, we will build a food truck delivery application that is user friendly. The application will use a map and a table to allow users to browse and search for alternatives food truck near their desired area.
+To allow our users to be able to discover new food truck from where ever they are in the city, we will build a food truck delivery application that is user friendly. The application will use a map and a table to allow users to browse and search for alternatives food truck near their desired area.
 
 The following diagram ilustrate how to approach such project when facing external customers.
 ![Demo Map](image/projectstep.png)
@@ -18,27 +18,23 @@ A copy of this CSV data and its [Data Dictionary](https://data.sfgov.org/api/vie
 We will do rapid prototyping using the R language and Shiny package to demo the functionality. 
 
 ### Implementation Steps 
-The following illustrates the steps to proceed with this project. We express each step with a user story. To read full user story please refer to the backlog section.
+The following illustrates the steps for this project. We express each step with a user story. To read full user story please refer to the backlog section.
 
 * __Story 01. Raw Data Cleanup.__
-The original raw data from SFData requires clean up for several reasons, such as removing incomplete data or columns that are not useful.
+The original raw data from SFData requires clean up for several reasons, such as to remove incomplete data or columns that are not useful.
 In addition to this we will change the title of the column so that it is easier for users to read. As a follow up might want to add a few columns that can help enrich the user experience, for example a summary of the food truck as description and food category. For more on this please see *05. Data Enrichment user story*.
 The clean up job is a separate activity that can be executed regularly whenever the data needs to be updated. To do a clean up, we run the *datacleanup.R* file. The result of the data is stored at *Mobile_Food_Facility_Permit_Clean.csv*.
 
 * __Story 02. View All Food Truck in Table.__
-Once the data has been cleaned, we can show the data as a simple table. For a better user experience, we hide columns that are not relevant to the users for example Latitude and Longitude data. In this demo we use the Shiny package. 
+The first visualization is the table. Once the data has been prepared, we can show the data as a simple table. For a better user experience, we hide columns that are not relevant to the users for example Latitude and Longitude data. In this demo we use the Shiny package. 
 The demo code for this is kept under *server.R* file.
 
 * __Story 03. Simple search on Table.__
-The first visualization is the table. The table view will allow the users to search based on specific interest, for example searching based in zip code area, search based on food type, or search based on address where they are. We will use the same Shiny package for the simple search and pagination feature. 
-The demo code for this is kept under *server.R* file.
+The table view will allow the users to search based on specific interest, for example searching based in zip code area, search based on food type, or search based on address where they are. To demonstrate the feature, we use the same Shiny package for the simple search and pagination feature. The demo code for this is kept under *server.R* file.
 
 * __Story 04. View All Food Truck in Map.__
-The second visualization is with a map. Search for food truck with a map will help users give spatial awareness on nearby food truck. The user can decide for themselves the level of radius that is acceptable as distance. Using the latitude and longitude data, every food truck is placed in a map. To help focus, the map is centered at the center of the city and the whole city is visible as default.
+The second visualization is with a map. Search for food truck with a map will help users give spatial awareness on nearby food trucks. The user can decide for themselves the level of radius that is acceptable as distance. Using the latitude and longitude data, every food truck is placed in a map. To help focus, the map is centered at the center of the city and the whole city is visible as default.
 The demo code for this is kept under *server.R* file.
-
-* __Story 05. Advanced filtering on Map.__
-To allow complete exploration, the user will be able to zoom in/out and pan the map to find all possible options. 
 
 ## Next Steps
 The rapid prototype will show the first iteration (MVP) of what the application could look like. Further validation is needed to see if this application is helping the users (San Francisco team) discover the food trucks that they like.
