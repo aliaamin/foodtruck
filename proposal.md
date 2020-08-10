@@ -7,7 +7,7 @@ The San Fransisco team would like to be able to discover new places to eat. They
 ## Proposed Solution
 To allow our users to be able to discover new food truck from where ever they are in the city, we will build a food truck delivery application that is user friendly. The application will use a map and a table to allow users to browse and search for alternatives food truck near their desired area.
 
-The following diagram ilustrate how to approach such project when facing external customers.
+The following diagram illustrate how to approach such project when facing external customers.
 ![Demo Map](image/projectstep.png)
 
 ### Data
@@ -109,16 +109,16 @@ As a user, I would like to be able to filter on the table to find the Food that 
 As a user, I would like to see all available Food Truck in a map, so that I can see all avaliable options near where I am.
 
 *Acceptance Criteria*
-- The map shall focus on San Fransisco city as starting viewpoint
-- The map shall display all elegible food truck from the clean data.csv file in a form of a point
-- Upon clicking each point additional basic information shall be shown, e.g. name of food truck, the type of food offered, availablity hours and address
-- The user shall be able to zoom in and out and pan the map to explore nearby food truck
+- The map shall focus on San Fransisco city as starting viewpoint.
+- The map shall display all elegible food truck from the clean data.csv file in a form of a point.
+- Upon clicking each point additional basic information shall be shown, e.g. name of food truck, the type of food offered, availablity hours and location.
+- The user shall be able to zoom in and out and pan the map to explore nearby food truck.
 
 *Acceptance Test*
 
 *Given* the Map tab shows the data from the output file "Mobile_Food_Facility_Permit_Clean.csv"
 *When* I navigate myself towards Channel Street near the harbor.
-*then* I can see at least there are 3 food truck near me: "Got Snacks", "Wonder Philly", and "Kabob Trolley"
+*then* I can see at least there are 3 food trucks near me: "Got Snacks", "Wonder Philly", and "Kabob Trolley"
 
 *Given* the Map tab shows the data from the output file "Mobile_Food_Facility_Permit_Clean.csv"
 *When* I navigate myself towards any point in SF city.
